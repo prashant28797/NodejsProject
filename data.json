@@ -1,0 +1,156 @@
+[
+  {
+    "CountryName": "Country Name",
+    "Area": "Area - (Sq. Km.) 2010",
+    "population": "Population (Millions) - 2013",
+    "GDP": "GDP Billions (US$) - 2013",
+    "purchasingpower": "Purchasing Power in Billions ( Current International Dollar) - 2013"
+  },
+  {
+    "CountryName": "Argentina",
+    "Area": "2766890.00",
+    "population": "41.49",
+    "GDP": "498.70",
+    "purchasingpower": "776.28"
+  },
+  {
+    "CountryName": "Australia",
+    "Area": "7686850.00",
+    "population": "23.05",
+    "GDP": "1589.12",
+    "purchasingpower": "1015.94"
+  },
+  {
+    "CountryName": "Brazil",
+    "Area": "8511965.00",
+    "population": "199.88",
+    "GDP": "2456.66",
+    "purchasingpower": "2466.57"
+  },
+  {
+    "CountryName": "Canada",
+    "Area": "9976140.00",
+    "population": "35.21",
+    "GDP": "1843.75",
+    "purchasingpower": "1534.94"
+  },
+  {
+    "CountryName": "China",
+    "Area": "9596960.00",
+    "population": "1360.76",
+    "GDP": "9020.31",
+    "purchasingpower": "13623.26"
+  },
+  {
+    "CountryName": "France",
+    "Area": "547030.00",
+    "population": "63.70",
+    "GDP": "2739.27",
+    "purchasingpower": "2289.92"
+  },
+  {
+    "CountryName": "Germany",
+    "Area": "357021.00",
+    "population": "81.75",
+    "GDP": "3597.97",
+    "purchasingpower": "3269.56"
+  },
+  {
+    "CountryName": "India",
+    "Area": "3287590.00",
+    "population": "1239.26",
+    "GDP": "1972.84",
+    "purchasingpower": "5031.68"
+  },
+  {
+    "CountryName": "Indonesia",
+    "Area": "1919440.00",
+    "population": "247.95",
+    "GDP": "946.39",
+    "purchasingpower": "1314.66"
+  },
+  {
+    "CountryName": "Italy",
+    "Area": "301230.00",
+    "population": "61.00",
+    "GDP": "2076.01",
+    "purchasingpower": "1835.66"
+  },
+  {
+    "CountryName": "Japan",
+    "Area": "377835.00",
+    "population": "127.34",
+    "GDP": "5149.90",
+    "purchasingpower": "4778.52"
+  },
+  {
+    "CountryName": "Mexico",
+    "Area": "1972550.00",
+    "population": "116.02",
+    "GDP": "1274.97",
+    "purchasingpower": "1848.42"
+  },
+  {
+    "CountryName": "Russia",
+    "Area": "17075200.00",
+    "population": "141.44",
+    "GDP": "2213.57",
+    "purchasingpower": "2640.74"
+  },
+  {
+    "CountryName": "Saudi Arabia",
+    "Area": "1960582.00",
+    "population": "26.93",
+    "GDP": "745.62",
+    "purchasingpower": "735.82"
+  },
+  {
+    "CountryName": "South Africa",
+    "Area": "1219912.00",
+    "population": "51.81",
+    "GDP": "375.99",
+    "purchasingpower": "608.80"
+  },
+  {
+    "CountryName": "Republic of Korea",
+    "Area": "98480.00",
+    "population": "50.24",
+    "GDP": "1258.59",
+    "purchasingpower": "1687.14"
+  },
+  {
+    "CountryName": "Turkey",
+    "Area": "780580.00",
+    "population": "75.81",
+    "GDP": "851.82",
+    "purchasingpower": "1181.01"
+  },
+  {
+    "CountryName": "United Kingdom",
+    "Area": "244820.00",
+    "population": "63.76",
+    "GDP": "2422.92",
+    "purchasingpower": "2391.04"
+  },
+  {
+    "CountryName": "USA",
+    "Area": "9629091.00",
+    "population": "316.85",
+    "GDP": "16237.75",
+    "purchasingpower": "16237.75"
+  },
+  {
+    "CountryName": "European Union",
+    "Area": "4324782.00",
+    "population": "504.89",
+    "GDP": "17266.94",
+    "purchasingpower": "16213.64"
+  },
+  {
+    "CountryName": "World",
+    "Area": "510072000.00",
+    "population": "7095.22",
+    "GDP": "73454.49",
+    "purchasingpower": "86698.37"
+  }
+]
