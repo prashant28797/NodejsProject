@@ -1,5 +1,13 @@
 var fs=require('fs');
 var output = [];
+
+var Asia =['India','China','Japan','Saudi Arabia','Republic of Korea','Turkey','Indonesia'];
+var Europe=['France','Germany','Italy','Russia','United Kingdom'];
+var Africa=['South Africa'];
+var America=['Brazil','Canada','Mexico'];
+var popu=[];
+var continent=[Asia,Europe,Africa,America];
+
 //var count = 0
 
 var lineReader = require('readline').createInterface({
@@ -7,6 +15,12 @@ var lineReader = require('readline').createInterface({
 });
 
 var mywritestream=fs.createWriteStream('/home/traning/Desktop/data.json');
+
+var mywritestream1=fs.createWriteStream('./data1.json');
+
+var mywritestream2=fs.createWriteStream('./gdp.json');
+
+var mywritestream3=fs.createWriteStream('./purchasing.json');
 
 lineReader.on('line', function (line) {
   var jsonFromLine = {};
@@ -35,23 +49,227 @@ lineReader.on('line', function (line) {
 
 
 
+var filter1=[];
 
 lineReader.on('close',function(line){
   mywritestream.write(JSON.stringify(output,null,2));
 });
 
 
-lineReader.on('close',function(line){
-var obj=output.filter(e => e.population <300000)
-.sort((a,b)=>(b.population-a.population))
-.map(e => console.log( '"'+e.population+'"' ));
+
+//lineReader
+
+// json for sorted of population column
+
+var obj=[];
+var obj1;
 
 
-//console.log(obj);
+lineReader.on('line',function(line){
+		var jsonFromLine={};
+		var lineSplit=line.split(',');
+
+		 jsonFromLine.CountryName = lineSplit[0];
+
+		 jsonFromLine.population = lineSplit[5];
+		 obj.push(jsonFromLine);
+
+		 if(jsonFromLine.CountryName != 'European Union' && jsonFromLine.CountryName != 'World')
+		 {
+
+ obj1=obj.sort((a,b)=>(b.population-a.population));
+//.map(e => ( return e.CountryName; ));
+
+//	filter1.push(jsonFromLine););
+}
+
+
 
 //console.log(obj[0].population);
 
 });
+
+
+//console.log(obj1);
+
+lineReader.on('close',function(line){
+
+mywritestream1.write(JSON.stringify(obj1,null,2));
+})
+
+
+
+
+//sorting of  gdp pf country
+var gdp=[];
+//var obj1;
+
+
+lineReader.on('line',function(line){
+		var jsonFromLine={};
+		var lineSplit=line.split(',');
+
+		 jsonFromLine.CountryName = lineSplit[0];
+
+		 jsonFromLine.GDP = lineSplit[9];
+		 gdp.push(jsonFromLine);
+
+		 if(jsonFromLine.CountryName != 'European Union' && jsonFromLine.CountryName != 'World')
+		 {
+
+ gdp1=gdp.sort((a,b)=>(b.GDP-a.GDP));
+//.map(e => ( return e.CountryName; ));
+
+//	filter1.push(jsonFromLine););
+}
+
+
+
+//console.log(obj[0].population);
+
+});
+
+
+//console.log(obj1);
+
+lineReader.on('close',function(line){
+
+mywritestream2.write(JSON.stringify(gdp1,null,2));
+})
+
+
+
+
+
+//Sorting purchasing power
+
+var purchasing=[];
+//var obj1;
+
+
+lineReader.on('line',function(line){
+		var jsonFromLine={};
+		var lineSplit=line.split(',');
+
+		 jsonFromLine.CountryName = lineSplit[0];
+
+		 jsonFromLine.purchasingpower = lineSplit[17];
+		 purchasing.push(jsonFromLine);
+
+		 if(jsonFromLine.CountryName != 'European Union' && jsonFromLine.CountryName != 'World')
+		 {
+
+   purchasing.sort((a,b)=>(b.purchasingpower-a.purchasingpower));
+//.map(e => ( return e.CountryName; ));
+
+//	filter1.push(jsonFromLine););
+}
+
+
+
+//console.log(obj[0].population);
+
+});
+
+
+//console.log(obj1);
+
+lineReader.on('close',function(line){
+
+mywritestream3.write(JSON.stringify(purchasing,null,2));
+})
+
+
+
+
+
+///growth in popualtion in 2010 to 2013
+
+
+var growth=[];
+
+lineReader.on('line',function(line){
+
+	var jsonFromLine={};
+	var lineSplit=line.split(',');
+
+	jsonFromLine.CountryName = lineSplit[0];
+	jsonFromLine.Population2010=lineSplit[2];
+	jsonFromLine.Population2013=lineSplit[5];
+	jsonFromLine.purchasingpower2010=lineSplit[15];
+	jsonFromLine.purchasingpower2013=lineSplit[18];
+
+growth.push(jsonFromLine);
+
+})
+
+
+
+
+//AGGREGATE THE CONTINENT
+var agr=[];
+
+lineReader.on('line',function(line){
+
+	var jsonFromLine={};
+	var lineSplit=line.split(',');
+
+	jsonFromLine.CountryName=lineSplit[0];
+	jsonFromLine.popualtion=lineSplit[2];
+
+
+agr.push(jsonFromLine);
+
+});
+
+var prashant=0;
+var big=[];
+lineReader.on('close',function(line){
+
+//console.log(continent)
+ agr.filter(function(e)
+{
+	//console.log(continent);
+	for(var i=0;i<continent.length;i++)
+	{
+		//console.log(continent[i]);
+		for(var j=0;j<continent[i].length;j++)
+		{
+			//console.log(continent[i][j]);
+			if(e.CountryName == continent[i][j])
+			{
+				//console.log(e.popualtion);
+				//var h = parseInt(e.popualtion);
+      //console.log(continent[i]);
+       //console.log(e.popualtion);
+
+				popu[continent[i]]= popu[continent[i]] +  e.popualtion;
+			
+			}
+	console.log(popu[continent[i]]);
+		}
+
+		
+	}
+
+
+	
+});
+
+ big.push(popu);
+//console.log(prashant);
+console.log(popu);
+});
+
+
+
+
+// lineReader.on('close',function(line){
+//   console.log(filter);
+// });
+
+
+//'{'+"CountryName"+':''"'+e.CountryName+'"'+','+"population"+':'+'"'+e.population+'"'+'}'
 
 //console.log(obj.population);
 
