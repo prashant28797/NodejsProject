@@ -1,6 +1,4 @@
 var fs=require('fs');
-var output = [];
-
 var Asia =['India','China','Japan','Saudi Arabia','Republic of Korea','Turkey','Indonesia'];
 var Europe=['France','Germany','Italy','Russia','United Kingdom'];
 var Africa=['South Africa'];
@@ -22,48 +20,10 @@ var mywritestream2=fs.createWriteStream('./gdp.json');
 
 var mywritestream3=fs.createWriteStream('./purchasing.json');
 
-lineReader.on('line', function (line) {
-  var jsonFromLine = {};
-  // var Population=Population;
-   // this is my conditional. Set line 2
-    var lineSplit = line.split(',');
-    // select columns you want
-    jsonFromLine.CountryName = lineSplit[0];
-    jsonFromLine.Area = lineSplit[1];
-    jsonFromLine.population = lineSplit[5];
-    jsonFromLine.GDP=lineSplit[9];
-    jsonFromLine.purchasingpower=lineSplit[17];
-    // ...  
-    output.push(jsonFromLine);
-  
-  
-});
-
-// lineReader.on('line', function (line) {
-//    // console.log(output); // list output 
-   
-//    var str=line.replace(/"([^"]+(?="))"/g, '$1');
-//     mywritestream.write(JSON.stringify(str,null,2));
-// });
-
-
-
-
-var filter1=[];
-
-lineReader.on('close',function(line){
-  mywritestream.write(JSON.stringify(output,null,2));
-});
-
-
-
-//lineReader
 
 // json for sorted of population column
 
 var obj=[];
-var obj1;
-
 
 lineReader.on('line',function(line){
 		var jsonFromLine={};
@@ -73,28 +33,19 @@ lineReader.on('line',function(line){
 
 		 jsonFromLine.population = lineSplit[5];
 		 obj.push(jsonFromLine);
-
-		 if(jsonFromLine.CountryName != 'European Union' && jsonFromLine.CountryName != 'World')
-		 {
-
- obj1=obj.sort((a,b)=>(b.population-a.population));
-//.map(e => ( return e.CountryName; ));
-
-//	filter1.push(jsonFromLine););
-}
-
-
-
-//console.log(obj[0].population);
-
 });
 
 
 //console.log(obj1);
 
 lineReader.on('close',function(line){
-
-mywritestream1.write(JSON.stringify(obj1,null,2));
+var getdata1=obj.filter(function(data){
+		if(data.CountryName != 'European Union' && data.CountryName != 'World')
+		{
+        return data.CountryName;
+		}
+}).sort((a,b)=>(b.popualtion-a.population));
+mywritestream1.write(JSON.stringify(getdata1,null,2));
 })
 
 
@@ -102,8 +53,6 @@ mywritestream1.write(JSON.stringify(obj1,null,2));
 
 //sorting of  gdp pf country
 var gdp=[];
-//var obj1;
-
 
 lineReader.on('line',function(line){
 		var jsonFromLine={};
@@ -114,27 +63,17 @@ lineReader.on('line',function(line){
 		 jsonFromLine.GDP = lineSplit[9];
 		 gdp.push(jsonFromLine);
 
-		 if(jsonFromLine.CountryName != 'European Union' && jsonFromLine.CountryName != 'World')
-		 {
-
- gdp1=gdp.sort((a,b)=>(b.GDP-a.GDP));
-//.map(e => ( return e.CountryName; ));
-
-//	filter1.push(jsonFromLine););
-}
-
-
-
-//console.log(obj[0].population);
-
 });
 
 
-//console.log(obj1);
-
 lineReader.on('close',function(line){
-
-mywritestream2.write(JSON.stringify(gdp1,null,2));
+var getdata1=gdp.filter(function(data){
+		if(data.CountryName != 'European Union' && data.CountryName != 'World')
+		{
+        return data.CountryName;
+		}
+}).sort((a,b)=>(b.GDP-a.GDP));
+mywritestream2.write(JSON.stringify(getdata1,null,2));
 })
 
 
@@ -144,8 +83,6 @@ mywritestream2.write(JSON.stringify(gdp1,null,2));
 //Sorting purchasing power
 
 var purchasing=[];
-//var obj1;
-
 
 lineReader.on('line',function(line){
 		var jsonFromLine={};
@@ -156,28 +93,17 @@ lineReader.on('line',function(line){
 		 jsonFromLine.purchasingpower = lineSplit[17];
 		 purchasing.push(jsonFromLine);
 
-		 if(jsonFromLine.CountryName != 'European Union' && jsonFromLine.CountryName != 'World')
-		 {
-
-   purchasing.sort((a,b)=>(b.purchasingpower-a.purchasingpower));
-//.map(e => ( return e.CountryName; ));
-
-//	filter1.push(jsonFromLine););
-}
-
-
-
-//console.log(obj[0].population);
-
 });
 
-
-//console.log(obj1);
-
 lineReader.on('close',function(line){
-
-mywritestream3.write(JSON.stringify(purchasing,null,2));
-})
+	var getdata=purchasing.filter(function(data){
+		if(data.CountryName != 'European Union' && data.CountryName != 'World')
+		{
+        return data.CountryName;
+		}
+}).sort((a,b)=>(b.purchasingpower-a.purchasingpower));
+mywritestream3.write(JSON.stringify(getdata,null,2));
+});
 
 
 
@@ -222,13 +148,30 @@ agr.push(jsonFromLine);
 
 });
 
+var g;
+
+lineReader.on('close',function(line){
+  g=agr.filter(function(data)
+{
+	if(data.CountryName != 'European Union' && data.CountryName != 'World')
+		{
+        return data.CountryName;
+		}
+
+		});
+
+ console.log(g);
+
+});
+
 var prashant=0;
 var big=[];
 lineReader.on('close',function(line){
 
 //console.log(continent)
- agr.filter(function(e)
+ g.filter(function(e)
 {
+	
 	//console.log(continent);
 	for(var i=0;i<continent.length;i++)
 	{
@@ -246,7 +189,7 @@ lineReader.on('close',function(line){
 				popu[continent[i]]= popu[continent[i]] +  e.popualtion;
 			
 			}
-	console.log(popu[continent[i]]);
+	//console.log(popu[continent[i]]);
 		}
 
 		

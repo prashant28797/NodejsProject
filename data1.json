@@ -4,28 +4,44 @@
     "population": "Population (Millions) - 2013"
   },
   {
-    "CountryName": "China",
-    "population": "1360.76"
-  },
-  {
-    "CountryName": "India",
-    "population": "1239.26"
-  },
-  {
     "CountryName": "USA",
     "population": "316.85"
   },
   {
-    "CountryName": "Indonesia",
-    "population": "247.95"
+    "CountryName": "Australia",
+    "population": "23.05"
   },
   {
     "CountryName": "Brazil",
     "population": "199.88"
   },
   {
-    "CountryName": "Russia",
-    "population": "141.44"
+    "CountryName": "Canada",
+    "population": "35.21"
+  },
+  {
+    "CountryName": "China",
+    "population": "1360.76"
+  },
+  {
+    "CountryName": "France",
+    "population": "63.70"
+  },
+  {
+    "CountryName": "Germany",
+    "population": "81.75"
+  },
+  {
+    "CountryName": "India",
+    "population": "1239.26"
+  },
+  {
+    "CountryName": "Indonesia",
+    "population": "247.95"
+  },
+  {
+    "CountryName": "Argentina",
+    "population": "41.49"
   },
   {
     "CountryName": "Japan",
@@ -36,24 +52,12 @@
     "population": "116.02"
   },
   {
-    "CountryName": "Germany",
-    "population": "81.75"
+    "CountryName": "Russia",
+    "population": "141.44"
   },
   {
-    "CountryName": "Turkey",
-    "population": "75.81"
-  },
-  {
-    "CountryName": "United Kingdom",
-    "population": "63.76"
-  },
-  {
-    "CountryName": "France",
-    "population": "63.70"
-  },
-  {
-    "CountryName": "Italy",
-    "population": "61.00"
+    "CountryName": "Saudi Arabia",
+    "population": "26.93"
   },
   {
     "CountryName": "South Africa",
@@ -64,27 +68,15 @@
     "population": "50.24"
   },
   {
-    "CountryName": "Argentina",
-    "population": "41.49"
+    "CountryName": "Turkey",
+    "population": "75.81"
   },
   {
-    "CountryName": "Canada",
-    "population": "35.21"
+    "CountryName": "United Kingdom",
+    "population": "63.76"
   },
   {
-    "CountryName": "Saudi Arabia",
-    "population": "26.93"
-  },
-  {
-    "CountryName": "Australia",
-    "population": "23.05"
-  },
-  {
-    "CountryName": "European Union",
-    "population": "504.89"
-  },
-  {
-    "CountryName": "World",
-    "population": "7095.22"
+    "CountryName": "Italy",
+    "population": "61.00"
   }
 ]
