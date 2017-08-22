@@ -1,9 +1,5 @@
 [
   {
-    "CountryName": "Country Name",
-    "GDP": "GDP Billions (US$) - 2013"
-  },
-  {
     "CountryName": "USA",
     "GDP": "16237.75"
   },

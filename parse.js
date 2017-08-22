@@ -39,13 +39,15 @@ lineReader.on('line',function(line){
 //console.log(obj1);
 
 lineReader.on('close',function(line){
-var getdata1=obj.filter(function(data){
+var getdata=obj.filter(function(data){
 		if(data.CountryName != 'European Union' && data.CountryName != 'World')
 		{
         return data.CountryName;
 		}
 }).sort((a,b)=>(b.popualtion-a.population));
-mywritestream1.write(JSON.stringify(getdata1,null,2));
+getdata.shift();
+//console.log(getdata);
+mywritestream1.write(JSON.stringify(getdata,null,2));
 })
 
 
@@ -73,6 +75,7 @@ var getdata1=gdp.filter(function(data){
         return data.CountryName;
 		}
 }).sort((a,b)=>(b.GDP-a.GDP));
+getdata1.shift();
 mywritestream2.write(JSON.stringify(getdata1,null,2));
 })
 
@@ -96,13 +99,14 @@ lineReader.on('line',function(line){
 });
 
 lineReader.on('close',function(line){
-	var getdata=purchasing.filter(function(data){
+	var getdata2=purchasing.filter(function(data){
 		if(data.CountryName != 'European Union' && data.CountryName != 'World')
 		{
         return data.CountryName;
 		}
 }).sort((a,b)=>(b.purchasingpower-a.purchasingpower));
-mywritestream3.write(JSON.stringify(getdata,null,2));
+	getdata2.shift();
+mywritestream3.write(JSON.stringify(getdata2,null,2));
 });
 
 
@@ -143,14 +147,16 @@ lineReader.on('line',function(line){
 	jsonFromLine.CountryName=lineSplit[0];
 	jsonFromLine.popualtion=lineSplit[2];
 
-
+//agr.shift();
 agr.push(jsonFromLine);
-
+//console.log(agr);
 });
-
+//console.log(agr);
 var g;
 
 lineReader.on('close',function(line){
+	//agr.shift();
+	//console.log(agr);
   g=agr.filter(function(data)
 {
 	if(data.CountryName != 'European Union' && data.CountryName != 'World')
@@ -160,49 +166,53 @@ lineReader.on('close',function(line){
 
 		});
 
- console.log(g);
+// console.log(g);
 
 });
+
+//// foreach (var item in agr) {
+//   console.log(agr);
+// }
+
 
 var prashant=0;
 var big=[];
-lineReader.on('close',function(line){
 
-//console.log(continent)
- g.filter(function(e)
+ var cities = [
+    {name: 'India', population: 3792621},
+    {name: 'New York', population: 8175133},
+    {name: 'Chicago', population: 2695598},
+    {name: 'Houston', population: 2099451},
+    {name: 'Philadelphia', population: 1526006}
+];
+
+var bigCities = [];
+//console.log(agr[0]);
+for (var k of cities)
+
 {
-	
-	//console.log(continent);
+	console.log(cities.length);
 	for(var i=0;i<continent.length;i++)
 	{
-		//console.log(continent[i]);
-		for(var j=0;j<continent[i].length;j++)
+		console.log(continent.length);
+	for(var j=0;j<continent[i].length;j++)
+
 		{
 			//console.log(continent[i][j]);
-			if(e.CountryName == continent[i][j])
-			{
-				//console.log(e.popualtion);
-				//var h = parseInt(e.popualtion);
-      //console.log(continent[i]);
-       //console.log(e.popualtion);
+			if(k.name == continent[i][j])
 
-				popu[continent[i]]= popu[continent[i]] +  e.popualtion;
+			{
+				//console.log(k.popualtion);
+						popu[continent[i]]= popu[continent[i]] +  k.popualtion;
 			
 			}
-	//console.log(popu[continent[i]]);
 		}
-
-		
 	}
 
-
-	
-});
+}
 
  big.push(popu);
-//console.log(prashant);
-console.log(popu);
-});
+//console.log(popu);
 
 
 
