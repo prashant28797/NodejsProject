@@ -1,43 +1,27 @@
 [
   {
-    "CountryName": "USA",
-    "population": "316.85"
-  },
-  {
-    "CountryName": "Australia",
-    "population": "23.05"
-  },
-  {
-    "CountryName": "Brazil",
-    "population": "199.88"
-  },
-  {
-    "CountryName": "Canada",
-    "population": "35.21"
-  },
-  {
     "CountryName": "China",
     "population": "1360.76"
-  },
-  {
-    "CountryName": "France",
-    "population": "63.70"
-  },
-  {
-    "CountryName": "Germany",
-    "population": "81.75"
   },
   {
     "CountryName": "India",
     "population": "1239.26"
   },
   {
+    "CountryName": "USA",
+    "population": "316.85"
+  },
+  {
     "CountryName": "Indonesia",
     "population": "247.95"
   },
   {
-    "CountryName": "Argentina",
-    "population": "41.49"
+    "CountryName": "Brazil",
+    "population": "199.88"
+  },
+  {
+    "CountryName": "Russia",
+    "population": "141.44"
   },
   {
     "CountryName": "Japan",
@@ -48,20 +32,8 @@
     "population": "116.02"
   },
   {
-    "CountryName": "Russia",
-    "population": "141.44"
-  },
-  {
-    "CountryName": "Saudi Arabia",
-    "population": "26.93"
-  },
-  {
-    "CountryName": "South Africa",
-    "population": "51.81"
-  },
-  {
-    "CountryName": "Republic of Korea",
-    "population": "50.24"
+    "CountryName": "Germany",
+    "population": "81.75"
   },
   {
     "CountryName": "Turkey",
@@ -72,7 +44,35 @@
     "population": "63.76"
   },
   {
+    "CountryName": "France",
+    "population": "63.70"
+  },
+  {
     "CountryName": "Italy",
     "population": "61.00"
+  },
+  {
+    "CountryName": "South Africa",
+    "population": "51.81"
+  },
+  {
+    "CountryName": "Republic of Korea",
+    "population": "50.24"
+  },
+  {
+    "CountryName": "Argentina",
+    "population": "41.49"
+  },
+  {
+    "CountryName": "Canada",
+    "population": "35.21"
+  },
+  {
+    "CountryName": "Saudi Arabia",
+    "population": "26.93"
+  },
+  {
+    "CountryName": "Australia",
+    "population": "23.05"
   }
 ]
