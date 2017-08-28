@@ -1,0 +1,135 @@
+[
+  {
+    "CountryName": "Argentina",
+    "Population2010": "40.12",
+    "Population2013": "41.49",
+    "purchasingpower2010": "644.35",
+    "purchasingpower2013": "776.28"
+  },
+  {
+    "CountryName": "Australia",
+    "Population2010": "22.18",
+    "Population2013": "23.05",
+    "purchasingpower2010": "880.09",
+    "purchasingpower2013": "1015.94"
+  },
+  {
+    "CountryName": "Brazil",
+    "Population2010": "194.95",
+    "Population2013": "199.88",
+    "purchasingpower2010": "2186.54",
+    "purchasingpower2013": "2466.57"
+  },
+  {
+    "CountryName": "Canada",
+    "Population2010": "34.08",
+    "Population2013": "35.21",
+    "purchasingpower2010": "1370.64",
+    "purchasingpower2013": "1534.94"
+  },
+  {
+    "CountryName": "China",
+    "Population2010": "1340.91",
+    "Population2013": "1360.76",
+    "purchasingpower2010": "10128.40",
+    "purchasingpower2013": "13623.26"
+  },
+  {
+    "CountryName": "France",
+    "Population2010": "62.77",
+    "Population2013": "63.70",
+    "purchasingpower2010": "2131.48",
+    "purchasingpower2013": "2289.92"
+  },
+  {
+    "CountryName": "Germany",
+    "Population2010": "81.76",
+    "Population2013": "81.75",
+    "purchasingpower2010": "2957.38",
+    "purchasingpower2013": "3269.56"
+  },
+  {
+    "CountryName": "India",
+    "Population2010": "1190.52",
+    "Population2013": "1239.26",
+    "purchasingpower2010": "4021.77",
+    "purchasingpower2013": "5031.68"
+  },
+  {
+    "CountryName": "Indonesia",
+    "Population2010": "237.64",
+    "Population2013": "247.95",
+    "purchasingpower2010": "1034.65",
+    "purchasingpower2013": "1314.66"
+  },
+  {
+    "CountryName": "Italy",
+    "Population2010": "60.34",
+    "Population2013": "61.00",
+    "purchasingpower2010": "1799.17",
+    "purchasingpower2013": "1835.66"
+  },
+  {
+    "CountryName": "Japan",
+    "Population2010": "128.05",
+    "Population2013": "127.34",
+    "purchasingpower2010": "4389.48",
+    "purchasingpower2013": "4778.52"
+  },
+  {
+    "CountryName": "Mexico",
+    "Population2010": "112.32",
+    "Population2013": "116.02",
+    "purchasingpower2010": "1566.31",
+    "purchasingpower2013": "1848.42"
+  },
+  {
+    "CountryName": "Russia",
+    "Population2010": "142.90",
+    "Population2013": "141.44",
+    "purchasingpower2010": "2241.70",
+    "purchasingpower2013": "2640.74"
+  },
+  {
+    "CountryName": "Saudi Arabia",
+    "Population2010": "27.56",
+    "Population2013": "26.93",
+    "purchasingpower2010": "619.83",
+    "purchasingpower2013": "735.82"
+  },
+  {
+    "CountryName": "South Africa",
+    "Population2010": "49.99",
+    "Population2013": "51.81",
+    "purchasingpower2010": "528.04",
+    "purchasingpower2013": "608.80"
+  },
+  {
+    "CountryName": "Republic of Korea",
+    "Population2010": "49.41",
+    "Population2013": "50.24",
+    "purchasingpower2010": "1468.33",
+    "purchasingpower2013": "1687.14"
+  },
+  {
+    "CountryName": "Turkey",
+    "Population2010": "73.00",
+    "Population2013": "75.81",
+    "purchasingpower2010": "970.50",
+    "purchasingpower2013": "1181.01"
+  },
+  {
+    "CountryName": "United Kingdom",
+    "Population2010": "62.26",
+    "Population2013": "63.76",
+    "purchasingpower2010": "2223.25",
+    "purchasingpower2013": "2391.04"
+  },
+  {
+    "CountryName": "USA",
+    "Population2010": "309.73",
+    "Population2013": "316.85",
+    "purchasingpower2010": "14498.93",
+    "purchasingpower2013": "16237.75"
+  }
+]

@@ -65,16 +65,16 @@ var svg = d3.select("body").append("svg")
 
 
 // load the data
-d3.json("./json/gdp.json", function(error, data) {
+d3.json("./json/population.json", function(error, data) {
 
     data.forEach(function(d) {
         d.CountryName = d.CountryName;
-        d.GDP = +d.GDP;
+        d.population = +d.population;
     });
 	
   // scale the range of the data
   x.domain(data.map(function(d) { return d.CountryName; }));
-  y.domain([0, d3.max(data, function(d) { return d.GDP; })]);
+  y.domain([0, d3.max(data, function(d) { return d.population; })]);
 
   // add axis
   svg.append("g")
@@ -105,11 +105,11 @@ d3.json("./json/gdp.json", function(error, data) {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.CountryName); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.GDP); })
-      .attr("height", function(d) { return height - y(d.GDP); });
+      .attr("y", function(d) { return y(d.population); })
+      .attr("height", function(d) { return height - y(d.population); });
 
 });
 
 </script>
 
-</body
+</body>

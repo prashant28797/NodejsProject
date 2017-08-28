@@ -2,16 +2,6 @@ var fs=require('fs');
 var lineReader = require('readline').createInterface({
   input: fs.createReadStream('./da.csv')
 });
-
-var mywritestream=fs.createWriteStream('./data.json');
-
-var mywritestream1=;
-
-var mywritestream2=;
-
-var mywritestream3=;
-
-
 // json for sorted of population column
 
 var obj=[];
@@ -34,7 +24,7 @@ var s=obj.filter(function(data){
 }).sort((a,b)=>(b.population-a.population));
 s.shift();
 console.log(s);
-fs.createWriteStream('./data1.json').write(JSON.stringify(s,null,2));
+fs.createWriteStream('./population.json').write(JSON.stringify(s,null,2));
 })
 
 //sorting of  gdp pf country

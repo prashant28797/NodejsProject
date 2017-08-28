@@ -65,7 +65,7 @@ var svg = d3.select("body").append("svg")
 
 
 // load the data
-d3.json("./purchasing.json", function(error, data) {
+d3.json("./json/purchasing.json", function(error, data) {
 
     data.forEach(function(d) {
         d.CountryName = d.CountryName;
